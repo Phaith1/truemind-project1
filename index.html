@@ -46,6 +46,68 @@
             margin-right: 12px;
             flex-shrink: 0;
         }
+
+        /* mobile adjustments */
+        @media (max-width: 768px) {
+            main.row {
+                flex-direction: column;
+                position: relative;
+            }
+
+            /* nav sits in normal flow under the image on small screens */
+            .nav {
+                position: static;
+                margin: 1rem 0;
+                width: 100%;
+            }
+
+            .nav h2 {
+                font-size: 1.5rem;
+                display: block;
+                /* ensure brand text shows */
+            }
+
+            .nav a {
+                padding: 0.25rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .col-md-6:first-child img {
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                width: 100% !important;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+
+            .content ul li {
+                font-size: 0.95rem;
+                justify-content: center;
+            }
+
+            .icon-wrapper {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+            }
+
+            /* buttons full width */
+            .content .btn {
+                width: 100%;
+            }
+
+            /* hide footer on mobile */
+            footer {
+                display: none !important;
+            }
+        }
     </style>
     <!-- Font Awesome 5 for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -70,7 +132,7 @@
 
             <div class="row justify-content-center align-items-center">
                 <div class="content col-8 justify-content-center">
-                    <p class="fw-bold fs-3">Your Authentic Taste of Nigeria</p>
+                    <p class="fw-bold fs-3 pt-sm-5">Your Authentic Taste of Nigeria</p>
                     <p class="fw-semibold">
                         Experience homemade flavours delivered fresh to your desk or home. We bring the rich Culinary
                         heritage of Nigeria to your doorstep.
