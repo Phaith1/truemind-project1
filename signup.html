@@ -200,8 +200,27 @@
                 font-size: 2rem;
             }
 
+            /* collapse layout for small screens */
+            .signin-container {
+                flex-direction: column;
+            }
+
             .signin-image-section {
-                min-height: 250px;
+                display: none;
+            }
+
+            .signin-form-section {
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .signin-form {
+                max-width: 100%;
+            }
+
+            /* hide footer at mobile viewport */
+            footer {
+                display: none !important;
             }
         }
     </style>
@@ -230,7 +249,7 @@
             <div class="signin-form">
                 <h2 class="island-moments-regular text-center"
                     style="color: rgb(255, 132, 0); font-size: 1.8rem; margin-bottom: 10px;">Chuks Kitchen</h2>
-                <h3 class="text-center fw-bold mb-4" style="color: #333; font-size: 1.3rem;">Login your Account</h3>
+                <h3 class="text-center fw-bold mb-4" style="color: #333; font-size: 1.3rem;">Create your Account</h3>
 
                 <form>
                     <div class="mb-3">
@@ -276,7 +295,8 @@
                     </div>
                     <div class="mb-3 row">
                         <input type="checkbox" name="agree" id="agree" class="col-1" style="width: 20px; height: 20px;">
-                        <label for="agree" class="form-label col">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a> </label>
+                        <label for="agree" class="form-label col">I agree to the <a href="#">Terms and Conditions</a>
+                            and <a href="#">Privacy Policy</a> </label>
                     </div>
 
                     <button type="submit" class="btn btn-continue col-12 text-white mb-3">Continue</button>

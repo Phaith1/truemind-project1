@@ -200,8 +200,27 @@
                 font-size: 2rem;
             }
 
+            /* collapse layout on mobile */
+            .signin-container {
+                flex-direction: column;
+            }
+
             .signin-image-section {
-                min-height: 250px;
+                display: none;
+            }
+
+            .signin-form-section {
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .signin-form {
+                max-width: 100%;
+            }
+
+            /* hide footer on small screens */
+            footer {
+                display: none !important;
             }
         }
     </style>
@@ -257,7 +276,8 @@
                         <a href="#">Forgot Password?</a>
                     </div>
 
-                    <a href="home.html" class="btn btn-continue col-12 text-white mb-3">Continue</a>
+                    <a href="home.html" class="btn btn-continue col-12 text-white mb-3"
+                        style="text-decoration: none;">Continue</a>
                 </form>
 
                 <div class="or-continue">Or continue with</div>
